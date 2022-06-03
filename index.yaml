@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  jenkins-h:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-06-03T23:21:46.340658864+03:00"
+    description: A Helm chart for Kubernetes
+    digest: d97390c42cb871026765201a67429a401a32f1bde9993d1267eb5914a1c589c6
+    name: jenkins-h
+    type: application
+    urls:
+    - https://voyager1122.github.io/14.k8s/jenkins-h-0.1.0.tgz
+    version: 0.1.0
+generated: "2022-06-03T23:21:46.339844207+03:00"
