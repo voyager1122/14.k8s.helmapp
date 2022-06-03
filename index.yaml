@@ -1,14 +1,14 @@
 apiVersion: v1
 entries:
-  jenkins-h:
+  jenkins-helm:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-06-04T00:01:31.781842042+03:00"
+    created: "2022-06-04T00:31:53.055045532+03:00"
     description: A Helm chart for Kubernetes
-    digest: d97390c42cb871026765201a67429a401a32f1bde9993d1267eb5914a1c589c6
-    name: jenkins-h
+    digest: fbb4f2e2279cdc31265eb3c8fd507678b1d01bc433aff8792c32c4d2ff2c01fe
+    name: jenkins-helm
     type: application
     urls:
-    - https://voyager1122.github.io/14.k8s.helmapp/jenkins-h/jenkins-h-0.1.0.tgz
+    - https://voyager1122.github.io/14.k8s.helmapp/helm-app/jenkins-helm-0.1.0.tgz
     version: 0.1.0
-generated: "2022-06-04T00:01:31.780976593+03:00"
+generated: "2022-06-04T00:31:53.0542065+03:00"

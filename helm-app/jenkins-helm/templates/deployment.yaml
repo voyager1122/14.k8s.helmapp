@@ -2,22 +2,22 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: jenkins-h
+  name: jenkins-helm
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: jenkins-h
-  namespace: jenkins-h
+  name: jenkins-helm
+  namespace: jenkins-helm
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: jenkins-h
+      app: jenkins-helm
   template:
     metadata:
       labels:
-        app: jenkins-h
+        app: jenkins-helm
     spec:
       containers:
         - name: jenkins
@@ -72,7 +72,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: basic-security
-  namespace: jenkins-h
+  namespace: jenkins-helm
 data:
   basic-security.groovy: |
     #!groovy
@@ -93,7 +93,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: jenkins-config
-  namespace: jenkins-h
+  namespace: jenkins-helm
 data:
   jenkins.yaml: |
         jenkins:
@@ -102,9 +102,9 @@ data:
           - kubernetes:
               containerCapStr: "10"
               maxRequestsPerHostStr: "32"
-              jenkinsUrl: "http://jenkins-h:8080"
+              jenkinsUrl: "http://jenkins-helm:8080"
               name: "kubernetes"
-              namespace: "jenkins-h"
+              namespace: "jenkins-helm"
               skipTlsVerify: true
         credentials:
           system:
@@ -127,7 +127,7 @@ apiVersion: v1
 kind: Secret
 metadata:
   name: jenkins-secret
-  namespace: jenkins-h
+  namespace: jenkins-helm
 type: Opaque
 data:
   password: #####
@@ -135,8 +135,8 @@ data:
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
-  name: jenkins-h
-  namespace: jenkins-h
+  name: jenkins-helm
+  namespace: jenkins-helm
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
@@ -144,4 +144,4 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: default
-  namespace: jenkins-h
+  namespace: jenkins-helm

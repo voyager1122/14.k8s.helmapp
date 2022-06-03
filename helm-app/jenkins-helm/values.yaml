@@ -7,7 +7,7 @@ replicaCount: 1
 image:
   registry: jfrog.it-academy.by
   repository: jfrog.it-academy.by/public/jenkins-ci:ifanchenko
-  tag: :ifanchenko
+  tag: dorehkevich
   puillPolicy: IfNotPresent
   imageCredentials:
     registry: jfrog.it-academy.by
@@ -38,11 +38,11 @@ containerPort:
   jnlp-port: 50000
 
 host:
-  main_host: jenkins-h.k8s-53.sa
-  second_host: jenkins-h.k8s-54.sa
+  main_host: jenkins-helm.k8s-53.sa
+  second_host: jenkins-helm.k8s-54.sa
 
 url:
-  main_host_url: http://jenkins-h.k8s-53.sa/
+  main_host_url: http://jenkins-helm.k8s-53.sa/
 
 podAnnotations: {}
 
@@ -60,7 +60,7 @@ ingress:
   className: ""
   annotations: {}
   hosts:
-    - host: jenkins-h.k8s-53.sa
+    - host: jenkins-helm.k8s-53.sa
       paths:
         - path: /
           pathType: ImplementationSpecific
