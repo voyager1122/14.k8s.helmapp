@@ -5,11 +5,11 @@
 replicaCount: 1
 
 image:
-  registry: docker.io
-  repository: voyager1122/jenkins-ci
-  #registry: jfrog.it-academy.by
-  #repository: jfrog.it-academy.by/public/jenkins-ci:ifanchenko
-  tag: latest
+  #registry: docker.io
+  #repository: voyager1122/jenkins-ci
+  registry: jfrog.it-academy.by
+  repository: jfrog.it-academy.by/public/jenkins-ci:ifanchenko
+  #tag: latest
   puillPolicy: IfNotPresent
   #imageCredentials:
   #  registry: jfrog.it-academy.by
@@ -73,7 +73,7 @@ resources:
     cpu: 1000m
     memory: 2000Mi
   requests:
-    cpu: 2000m
+    cpu: 1000m
     memory: 2000Mi
 
 autoscaling:
