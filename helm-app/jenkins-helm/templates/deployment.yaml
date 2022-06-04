@@ -82,7 +82,7 @@ data:
     println "--> creating local user 'admin'"
     dev password = System.getenv("PASS")
     def hudsonRealm = new HudsonPrivateSecurityRealm(false)
-    hudsonRealm.createAccount('admin',"password")
+    hudsonRealm.createAccount('admin',"admin")
     instance.setSecurityRealm(hudsonRealm)
     def strategy = new FullControlOnceLoggedInAuthorizationStrategy()
     strategy.setAllowAnonymousRead(true)
