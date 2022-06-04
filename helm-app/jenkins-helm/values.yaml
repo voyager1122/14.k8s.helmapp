@@ -5,14 +5,16 @@
 replicaCount: 1
 
 image:
-  registry: jfrog.it-academy.by
-  repository: jfrog.it-academy.by/public/jenkins-ci:ifanchenko
-  tag: dorehkevich
+  registry: docker.io
+  repository: voyager1122/jenkins-ci
+  #registry: jfrog.it-academy.by
+  #repository: jfrog.it-academy.by/public/jenkins-ci:ifanchenko
+  tag: latest
   puillPolicy: IfNotPresent
-  imageCredentials:
-    registry: jfrog.it-academy.by
-    username: #####
-    password: #####
+  #imageCredentials:
+  #  registry: jfrog.it-academy.by
+  #  username: #####
+  #  password: #####
 
 nameOverride: ""
 fullnameOverride: ""
